@@ -83,7 +83,7 @@ class TableViewController: UITableViewController, ResourceObserver {
         let selectedIndexPath = self.tableView.indexPathForSelectedRow,
         let repoList = repoList {
             let repo = repoList.repositoryArray[selectedIndexPath.row]
-            vc.repo = GitHubAPI.repo(repo.full_name)
+            vc.repoList = GitHubAPI.repo(repo.full_name)
         }
     }
     

@@ -20,13 +20,13 @@ class DetailViewController: UIViewController, ResourceObserver {
     
     var statusOverlay = ResourceStatusOverlay()
     
-    var repo: Resource? {
+    var repoList: Resource? {
         
         didSet {
             oldValue?.removeObservers(ownedBy: self)
             oldValue?.cancelLoadIfUnobserved(afterDelay: 0.5)
             
-            repo?.addObserver(self)
+            repoList?.addObserver(self)
                 .addObserver(statusOverlay, owner: self)
                 .loadIfNeeded()
         }
@@ -51,8 +51,8 @@ class DetailViewController: UIViewController, ResourceObserver {
     func updateView() {
         // Only attempt to update subviews is the view controller's primary view has loaded
         if (self.isViewLoaded() == true)  {
-            infoView.hidden = (self.repo == nil)
-            if let repository = repo {
+            infoView.hidden = (self.repoList == nil)
+            if let repository = repoList?.repositoryArray.first {
                 
                 let rfc3339DateFormatter = NSDateFormatter()
                 let enUSPOSIXLocale = NSLocale(localeIdentifier: "en_US_POSIX")
@@ -63,23 +63,16 @@ class DetailViewController: UIViewController, ResourceObserver {
                 let shortDateFormatter = NSDateFormatter()
                 shortDateFormatter.dateStyle = .ShortStyle
                 
-                if let nameString = repository.json["name"].string {
-                    self.label1.text = "Name: " + nameString
-                }
-                if let createdDate = repository.json["created_at"].string, let date = rfc3339DateFormatter.dateFromString(createdDate) {
+                self.label1.text = "Name: " + repository.name
+                if let date = rfc3339DateFormatter.dateFromString(repository.created_at) {
                     let dateString = shortDateFormatter.stringFromDate(date)
-                    self.label2.text = "created: " + dateString
-                    
+                    self.label2.text = "Created: " + dateString
                 }
-                if let updatedDate = repository.json["updated_at"].string, let date = rfc3339DateFormatter.dateFromString(updatedDate) {
+                if let date = rfc3339DateFormatter.dateFromString(repository.updated_at) {
                     let dateString = shortDateFormatter.stringFromDate(date)
-                    self.label3.text = "updated: " + dateString
-
+                    self.label3.text = "Updated: " + dateString
                 }
-                if let watchers = repository.json["watchers_count"].int {
-                    self.label4.text = "watchers: " + String(watchers)
-
-                }
+                self.label4.text = "Watchers: " + String(repository.watchers)
             }
 
         }

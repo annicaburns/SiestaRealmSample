@@ -41,8 +41,7 @@ class TableViewController: UITableViewController, ResourceObserver {
         
         statusOverlay.embedIn(self)
         
-//        self.user = GithubAPI.user("p")
-        self.repoList = GitHubAPI.userRepos("p")
+        self.repoList = GitHubAPI.userRepos()
 
     }
     

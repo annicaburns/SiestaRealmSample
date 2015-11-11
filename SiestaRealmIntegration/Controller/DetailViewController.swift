@@ -60,7 +60,6 @@ class DetailViewController: UIViewController, ResourceObserver {
     // MARK: - ResourceObserver protocol
 
     func resourceChanged(resource: Resource, event: ResourceEvent) {
-        print("resource: \(resource.json)")
         self.updateView()
     }
     

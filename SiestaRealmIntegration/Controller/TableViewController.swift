@@ -63,8 +63,7 @@ class TableViewController: UITableViewController, ResourceObserver {
         
         if let cell = cell as? RepositoryTableViewCell, let repoList = repoList {
             let repo = repoList.json[indexPath.row]
-            cell.userLabel.text = repo["owner"]["login"].string
-            cell.repoLabel.text = repo["name"].string
+            cell.repoLabel.text = repo["full_name"].string
         }
 
         return cell
@@ -100,7 +99,6 @@ class TableViewController: UITableViewController, ResourceObserver {
 }
 
 class RepositoryTableViewCell: UITableViewCell {
-    @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var repoLabel: UILabel!
 }
 

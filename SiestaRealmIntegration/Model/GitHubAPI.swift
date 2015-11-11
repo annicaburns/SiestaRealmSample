@@ -8,6 +8,7 @@
 import Siesta
 
 let GitHubAPI = _GitHubAPI()
+import SwiftyJSON
 
 // Supply any GitHub username here
 let GitHubUsername = "bustoutsolutions"
@@ -26,8 +27,8 @@ class _GitHubAPI: Service {
             $0.config.responseTransformers.add(GithubErrorMessageExtractor())
         }
         
-//        configure("/Challenge/*")    {
-//            $0.config.responseTransformers.add(ChallengeListTransformer())
+//        configure("/users/*/repos")    {
+//            $0.config.responseTransformers.add(RepoListTransformer())
 //            $0.config.persistentCache = SiestaRealmChallengeCache()
 //        }
         
@@ -76,13 +77,13 @@ private struct GithubErrorMessageExtractor: ResponseTransformer {
 
 /// Parses JSON content into our models
 
-//public func ChallengeListTransformer(transformErrors: Bool = false) -> ResponseTransformer {
-//    //    print("ChallengeListTransformer starting")
+//public func RepoListTransformer(transformErrors: Bool = false) -> ResponseTransformer {
+//        print("RepoListTransformer starting")
 //    return ResponseContentTransformer(transformErrors: transformErrors)
 //        {
-//            (content: NSJSONConvertible, entity: Entity) throws -> [SingleChallenge] in
+//            (content: NSJSONConvertible, entity: Entity) throws -> [Repository] in
 //            
-//            //            print("ChallengeListTransformer running")
+//            print("RepoListTransformer running")
 //            
 //            let itemJSON = JSON(content)
 //            return SingleChallenge.parseChallengeList(itemJSON)

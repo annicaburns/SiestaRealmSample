@@ -66,9 +66,10 @@ class DetailViewController: UIViewController, ResourceObserver {
                 if let nameString = repository.json["name"].string {
                     self.label1.text = "Name: " + nameString
                 }
-                if let isPrivate = repository.json["private"].bool {
-                    let privateString = isPrivate ? "PRIVATE" : "Public"
-                    self.label2.text = privateString
+                if let createdDate = repository.json["created_at"].string, let date = rfc3339DateFormatter.dateFromString(createdDate) {
+                    let dateString = shortDateFormatter.stringFromDate(date)
+                    self.label2.text = "created: " + dateString
+                    
                 }
                 if let updatedDate = repository.json["updated_at"].string, let date = rfc3339DateFormatter.dateFromString(updatedDate) {
                     let dateString = shortDateFormatter.stringFromDate(date)

@@ -23,47 +23,23 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvR-XV-uvQ">
-                                            <rect key="frame" x="31" y="8" width="33.5" height="28"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="28" id="em5-0D-qgN"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY1-XN-tkQ">
-                                            <rect key="frame" x="66" y="8" width="6" height="28"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="100" verticalHuggingPriority="251" text="repo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArN-Hv-hEp">
-                                            <rect key="frame" x="74.5" y="8" width="489.5" height="28"/>
+                                            <rect key="frame" x="32" y="12" width="536" height="20.5"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="yY1-XN-tkQ" firstAttribute="height" secondItem="VvR-XV-uvQ" secondAttribute="height" id="2I5-Ha-6xQ"/>
-                                        <constraint firstItem="ArN-Hv-hEp" firstAttribute="centerY" secondItem="VvR-XV-uvQ" secondAttribute="centerY" id="Cpl-wA-U1T"/>
-                                        <constraint firstItem="yY1-XN-tkQ" firstAttribute="centerY" secondItem="VvR-XV-uvQ" secondAttribute="centerY" id="Q4A-WH-tfm"/>
-                                        <constraint firstItem="VvR-XV-uvQ" firstAttribute="leading" secondItem="KVa-bf-cjC" secondAttribute="leadingMargin" constant="23" id="X2v-AR-0gM"/>
-                                        <constraint firstItem="ArN-Hv-hEp" firstAttribute="height" secondItem="VvR-XV-uvQ" secondAttribute="height" id="ewE-Bt-NuE"/>
-                                        <constraint firstItem="VvR-XV-uvQ" firstAttribute="centerY" secondItem="KVa-bf-cjC" secondAttribute="centerY" id="jwa-3B-HHf"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="ArN-Hv-hEp" secondAttribute="trailing" constant="28" id="kBP-SH-Xpl"/>
-                                        <constraint firstItem="yY1-XN-tkQ" firstAttribute="leading" secondItem="VvR-XV-uvQ" secondAttribute="trailing" constant="2" id="n1R-Rs-cWY"/>
-                                        <constraint firstItem="ArN-Hv-hEp" firstAttribute="leading" secondItem="yY1-XN-tkQ" secondAttribute="trailing" constant="2" id="w3n-xz-bg2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ArN-Hv-hEp" secondAttribute="trailing" constant="24" id="GhS-Mr-IMi"/>
+                                        <constraint firstItem="ArN-Hv-hEp" firstAttribute="centerY" secondItem="KVa-bf-cjC" secondAttribute="centerY" id="sPw-Id-SQ1"/>
+                                        <constraint firstItem="ArN-Hv-hEp" firstAttribute="leading" secondItem="KVa-bf-cjC" secondAttribute="leadingMargin" constant="24" id="zPH-82-mbt"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
                                     <outlet property="repoLabel" destination="ArN-Hv-hEp" id="ZDs-qB-OaB"/>
-                                    <outlet property="userLabel" destination="VvR-XV-uvQ" id="SqL-HR-gno"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -27,10 +27,10 @@ class _GitHubAPI: Service {
             $0.config.responseTransformers.add(GithubErrorMessageExtractor())
         }
         
-//        configure("/users/*/repos")    {
-//            $0.config.responseTransformers.add(RepoListTransformer())
+        configure("/users/*/repos")    {
+            $0.config.responseTransformers.add(RepoListTransformer())
 //            $0.config.persistentCache = SiestaRealmChallengeCache()
-//        }
+        }
         
     }
     
@@ -77,16 +77,16 @@ private struct GithubErrorMessageExtractor: ResponseTransformer {
 
 /// Parses JSON content into our models
 
-//public func RepoListTransformer(transformErrors: Bool = false) -> ResponseTransformer {
-//        print("RepoListTransformer starting")
-//    return ResponseContentTransformer(transformErrors: transformErrors)
-//        {
-//            (content: NSJSONConvertible, entity: Entity) throws -> [Repository] in
-//            
-//            print("RepoListTransformer running")
-//            
+public func RepoListTransformer(transformErrors: Bool = false) -> ResponseTransformer {
+        print("RepoListTransformer starting")
+    return ResponseContentTransformer(transformErrors: transformErrors)
+        {
+            (content: NSJSONConvertible, entity: Entity) throws -> [Repository] in
+            
+            print("RepoListTransformer running")
+            
 //            let itemJSON = JSON(content)
-//            return SingleChallenge.parseChallengeList(itemJSON)
-//    }
-//}
+            return Repository.parseItemList(content)
+    }
+}
 

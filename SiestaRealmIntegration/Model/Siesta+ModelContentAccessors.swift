@@ -9,7 +9,7 @@ import Siesta
 
 extension TypedContentAccessors {
     
-//    var challengeArray: [SingleChallenge] { return contentAsType(ifNone: [] as [SingleChallenge]) }
+    var repositoryArray: [Repository] { return contentAsType(ifNone: [] as [Repository]) }
 //    var challenge: SingleChallenge { return contentAsType(ifNone: SingleChallenge()) }
     
 }

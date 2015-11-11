@@ -24,7 +24,7 @@ class Repository: Object {
 
 extension Repository {
     
-    class func parseChallengeList(fromJSON:NSJSONConvertible) -> [Repository] {
+    class func parseItemList(fromJSON:NSJSONConvertible) -> [Repository] {
         var list = [Repository]()
         
         if let jsonArray = fromJSON as? NSArray {

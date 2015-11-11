@@ -97,17 +97,38 @@
                                 <rect key="frame" x="20" y="84" width="560" height="501"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ZfX-Ki-Atb">
-                                        <rect key="frame" x="259" y="210" width="42" height="81"/>
+                                        <rect key="frame" x="202.5" y="119.5" width="155.5" height="262.5"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repository Details: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4MN-KP-h65">
+                                                <rect key="frame" x="0.0" y="0.0" width="155.5" height="20.5"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="0.054901960780000002" green="0.43137254899999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8X-yG-1cQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                                <rect key="frame" x="0.0" y="60.5" width="155.5" height="20.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZm-q9-ehE">
-                                                <rect key="frame" x="0.0" y="61" width="42" height="20"/>
+                                                <rect key="frame" x="0.0" y="121" width="155.5" height="20.5"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLV-I4-LVl">
+                                                <rect key="frame" x="0.0" y="181.5" width="155.5" height="20.5"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbB-Q0-jbB">
+                                                <rect key="frame" x="0.0" y="242" width="155.5" height="20.5"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -136,8 +157,10 @@
                     </view>
                     <connections>
                         <outlet property="infoView" destination="LRj-ee-7mp" id="wrC-SG-gnk"/>
-                        <outlet property="nameLabel" destination="D8X-yG-1cQ" id="xpG-OB-3ht"/>
-                        <outlet property="urlLabel" destination="wZm-q9-ehE" id="IOe-4o-GKx"/>
+                        <outlet property="label1" destination="D8X-yG-1cQ" id="bhQ-v2-DlD"/>
+                        <outlet property="label2" destination="wZm-q9-ehE" id="6Rm-V1-NHu"/>
+                        <outlet property="label3" destination="PLV-I4-LVl" id="R7l-Vr-EbR"/>
+                        <outlet property="label4" destination="JbB-Q0-jbB" id="CCw-QR-jaJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXb-9v-LPc" userLabel="First Responder" sceneMemberID="firstResponder"/>

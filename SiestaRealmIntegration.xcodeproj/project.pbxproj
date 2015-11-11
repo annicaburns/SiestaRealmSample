@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		751500DF1BF2979A00680714 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751500DE1BF2979A00680714 /* GithubAPI.swift */; };
 		751500E11BF2989A00680714 /* Siesta+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751500E01BF2989A00680714 /* Siesta+SwiftyJSON.swift */; };
 		751500E51BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751500E41BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift */; };
 		75B17C181BF28C92009895E6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B17C161BF28C92009895E6 /* TableViewController.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		751500DE1BF2979A00680714 /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
 		751500E01BF2989A00680714 /* Siesta+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Siesta+SwiftyJSON.swift"; path = "Model/Siesta+SwiftyJSON.swift"; sourceTree = "<group>"; };
 		751500E41BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Siesta+ModelContentAccessors.swift"; path = "Model/Siesta+ModelContentAccessors.swift"; sourceTree = "<group>"; };
 		75B17C161BF28C92009895E6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = Controller/TableViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 				75B17C1A1BF28D40009895E6 /* GitHubAPI.swift */,
 				751500E41BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift */,
 				751500E01BF2989A00680714 /* Siesta+SwiftyJSON.swift */,
-				751500DE1BF2979A00680714 /* GithubAPI.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -250,7 +247,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				75B17C181BF28C92009895E6 /* TableViewController.swift in Sources */,
-				751500DF1BF2979A00680714 /* GithubAPI.swift in Sources */,
 				75D980EE1BF286FD004C938A /* AppDelegate.swift in Sources */,
 				75B17C1B1BF28D40009895E6 /* GitHubAPI.swift in Sources */,
 				751500E11BF2989A00680714 /* Siesta+SwiftyJSON.swift in Sources */,

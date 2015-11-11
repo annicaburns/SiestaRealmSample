@@ -17,6 +17,8 @@
 		75D980F51BF286FD004C938A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D980F41BF286FD004C938A /* Assets.xcassets */; };
 		75D980F81BF286FD004C938A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D980F61BF286FD004C938A /* LaunchScreen.storyboard */; };
 		75E52B421BF3A05600AC7ADB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E52B411BF3A05600AC7ADB /* Repository.swift */; };
+		75E52B441BF3A33200AC7ADB /* SiestaRealmCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E52B431BF3A33200AC7ADB /* SiestaRealmCache.swift */; };
+		75E52B461BF3A39700AC7ADB /* SiestaRealmModelMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E52B451BF3A39700AC7ADB /* SiestaRealmModelMap.swift */; };
 		D2AE377B7FB76429E290E1EB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA7305E03A5A7BCA03A15C8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		75D980F71BF286FD004C938A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75D980F91BF286FD004C938A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75E52B411BF3A05600AC7ADB /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		75E52B431BF3A33200AC7ADB /* SiestaRealmCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SiestaRealmCache.swift; path = Model/SiestaRealmCache.swift; sourceTree = "<group>"; };
+		75E52B451BF3A39700AC7ADB /* SiestaRealmModelMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SiestaRealmModelMap.swift; path = Model/SiestaRealmModelMap.swift; sourceTree = "<group>"; };
 		8A58A483DCD4380798028290 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AE551544A659863C492761A4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CAA7305E03A5A7BCA03A15C8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +119,8 @@
 				75B17C1A1BF28D40009895E6 /* GitHubAPI.swift */,
 				751500E41BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift */,
 				751500E01BF2989A00680714 /* Siesta+SwiftyJSON.swift */,
+				75E52B431BF3A33200AC7ADB /* SiestaRealmCache.swift */,
+				75E52B451BF3A39700AC7ADB /* SiestaRealmModelMap.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -254,7 +260,9 @@
 				75D980EE1BF286FD004C938A /* AppDelegate.swift in Sources */,
 				75B17C1B1BF28D40009895E6 /* GitHubAPI.swift in Sources */,
 				751500E11BF2989A00680714 /* Siesta+SwiftyJSON.swift in Sources */,
+				75E52B441BF3A33200AC7ADB /* SiestaRealmCache.swift in Sources */,
 				75B17C191BF28C92009895E6 /* DetailViewController.swift in Sources */,
+				75E52B461BF3A39700AC7ADB /* SiestaRealmModelMap.swift in Sources */,
 				751500E51BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

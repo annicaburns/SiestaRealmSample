@@ -6,10 +6,11 @@
 //
 
 import Siesta
+import RealmSwift
 
 extension TypedContentAccessors {
     
     var repositoryArray: [Repository] { return contentAsType(ifNone: [] as [Repository]) }
-//    var challenge: SingleChallenge { return contentAsType(ifNone: SingleChallenge()) }
+    var realmObjectArray: [Object] { return contentAsType(ifNone: [] as [Object]) }
     
 }

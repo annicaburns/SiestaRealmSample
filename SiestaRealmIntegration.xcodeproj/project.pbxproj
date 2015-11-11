@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751500DF1BF2979A00680714 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751500DE1BF2979A00680714 /* GithubAPI.swift */; };
+		751500E11BF2989A00680714 /* Siesta+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751500E01BF2989A00680714 /* Siesta+SwiftyJSON.swift */; };
+		751500E51BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751500E41BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift */; };
+		75B17C181BF28C92009895E6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B17C161BF28C92009895E6 /* TableViewController.swift */; };
+		75B17C191BF28C92009895E6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B17C171BF28C92009895E6 /* DetailViewController.swift */; };
+		75B17C1B1BF28D40009895E6 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B17C1A1BF28D40009895E6 /* GitHubAPI.swift */; };
 		75D980EE1BF286FD004C938A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D980ED1BF286FD004C938A /* AppDelegate.swift */; };
-		75D980F01BF286FD004C938A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D980EF1BF286FD004C938A /* ViewController.swift */; };
 		75D980F31BF286FD004C938A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D980F11BF286FD004C938A /* Main.storyboard */; };
 		75D980F51BF286FD004C938A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75D980F41BF286FD004C938A /* Assets.xcassets */; };
 		75D980F81BF286FD004C938A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75D980F61BF286FD004C938A /* LaunchScreen.storyboard */; };
+		D2AE377B7FB76429E290E1EB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA7305E03A5A7BCA03A15C8 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751500DE1BF2979A00680714 /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		751500E01BF2989A00680714 /* Siesta+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Siesta+SwiftyJSON.swift"; path = "Model/Siesta+SwiftyJSON.swift"; sourceTree = "<group>"; };
+		751500E41BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Siesta+ModelContentAccessors.swift"; path = "Model/Siesta+ModelContentAccessors.swift"; sourceTree = "<group>"; };
+		75B17C161BF28C92009895E6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = Controller/TableViewController.swift; sourceTree = "<group>"; };
+		75B17C171BF28C92009895E6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
+		75B17C1A1BF28D40009895E6 /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GitHubAPI.swift; path = Model/GitHubAPI.swift; sourceTree = "<group>"; };
 		75D980EA1BF286FD004C938A /* SiestaRealmIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiestaRealmIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D980ED1BF286FD004C938A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75D980EF1BF286FD004C938A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75D980F21BF286FD004C938A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75D980F41BF286FD004C938A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75D980F71BF286FD004C938A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75D980F91BF286FD004C938A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A58A483DCD4380798028290 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AE551544A659863C492761A4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CAA7305E03A5A7BCA03A15C8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2AE377B7FB76429E290E1EB /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72BA428F136220B1C029B41A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE551544A659863C492761A4 /* Pods.debug.xcconfig */,
+				8A58A483DCD4380798028290 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		75D980E11BF286FD004C938A = {
 			isa = PBXGroup;
 			children = (
 				75D980EC1BF286FD004C938A /* SiestaRealmIntegration */,
 				75D980EB1BF286FD004C938A /* Products */,
+				72BA428F136220B1C029B41A /* Pods */,
+				C24713736CB5F822C5FBCCF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,51 @@
 		75D980EC1BF286FD004C938A /* SiestaRealmIntegration */ = {
 			isa = PBXGroup;
 			children = (
+				75D981011BF28757004C938A /* Model */,
+				75D981001BF28751004C938A /* View */,
+				75D980FF1BF28741004C938A /* Controller */,
 				75D980ED1BF286FD004C938A /* AppDelegate.swift */,
-				75D980EF1BF286FD004C938A /* ViewController.swift */,
 				75D980F11BF286FD004C938A /* Main.storyboard */,
 				75D980F41BF286FD004C938A /* Assets.xcassets */,
 				75D980F61BF286FD004C938A /* LaunchScreen.storyboard */,
 				75D980F91BF286FD004C938A /* Info.plist */,
 			);
 			path = SiestaRealmIntegration;
+			sourceTree = "<group>";
+		};
+		75D980FF1BF28741004C938A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				75B17C161BF28C92009895E6 /* TableViewController.swift */,
+				75B17C171BF28C92009895E6 /* DetailViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		75D981001BF28751004C938A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		75D981011BF28757004C938A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75B17C1A1BF28D40009895E6 /* GitHubAPI.swift */,
+				751500E41BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift */,
+				751500E01BF2989A00680714 /* Siesta+SwiftyJSON.swift */,
+				751500DE1BF2979A00680714 /* GithubAPI.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C24713736CB5F822C5FBCCF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAA7305E03A5A7BCA03A15C8 /* Pods.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75D980FC1BF286FD004C938A /* Build configuration list for PBXNativeTarget "SiestaRealmIntegration" */;
 			buildPhases = (
+				D420DACC370878083C91D296 /* Check Pods Manifest.lock */,
 				75D980E61BF286FD004C938A /* Sources */,
 				75D980E71BF286FD004C938A /* Frameworks */,
 				75D980E81BF286FD004C938A /* Resources */,
+				29A53CB752DE2EAE2D8F4E1F /* Embed Pods Frameworks */,
+				4A77CF2CC0D0C27E0FF76D4E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,13 +196,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		29A53CB752DE2EAE2D8F4E1F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A77CF2CC0D0C27E0FF76D4E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D420DACC370878083C91D296 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75D980E61BF286FD004C938A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75D980F01BF286FD004C938A /* ViewController.swift in Sources */,
+				75B17C181BF28C92009895E6 /* TableViewController.swift in Sources */,
+				751500DF1BF2979A00680714 /* GithubAPI.swift in Sources */,
 				75D980EE1BF286FD004C938A /* AppDelegate.swift in Sources */,
+				75B17C1B1BF28D40009895E6 /* GitHubAPI.swift in Sources */,
+				751500E11BF2989A00680714 /* Siesta+SwiftyJSON.swift in Sources */,
+				75B17C191BF28C92009895E6 /* DetailViewController.swift in Sources */,
+				751500E51BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +364,7 @@
 		};
 		75D980FD1BF286FD004C938A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE551544A659863C492761A4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SiestaRealmIntegration/Info.plist;
@@ -256,6 +376,7 @@
 		};
 		75D980FE1BF286FD004C938A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A58A483DCD4380798028290 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SiestaRealmIntegration/Info.plist;
@@ -284,6 +405,7 @@
 				75D980FE1BF286FD004C938A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

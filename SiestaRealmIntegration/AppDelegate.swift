@@ -3,7 +3,6 @@
 //  SiestaRealmIntegration
 //
 //  Created by Annica Burns on 11/10/15.
-//  Copyright © 2015 Health Catalyst. All rights reserved.
 //
 
 import UIKit

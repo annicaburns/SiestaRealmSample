@@ -16,15 +16,16 @@ class SiestaRealmCache: EntityCache {
         let realm = try! Realm()
         
         if let modelMap = realm.objectForPrimaryKey(ModelMap.self, key: key) {
-            if let item = modelMap.item {
-                return Entity(content: [item], contentType: "")
-            } else if modelMap.cacheKey != nil && modelMap.objectType != nil {
-                let items = realm.objects(Repository)
-                var respositories = [Repository]()
-                for repo in items {
-                    respositories.append(repo)
+            if modelMap.item is Placeholder {
+                if modelMap.objectType == "Repository" {
+                    let itemList = realm.objects(Repository)
+                    return Entity(content: itemList, contentType: "")
+                } else if modelMap.objectType == "User" {
+                    let itemList = realm.objects(User)
+                    return Entity(content: itemList, contentType: "")
                 }
-                return Entity(content: respositories, contentType: "")
+            } else {
+                return Entity(content: [modelMap.item], contentType: "")
             }
         }
         
@@ -36,15 +37,27 @@ class SiestaRealmCache: EntityCache {
         print("SiestaRealmCache writeEntity")
         
         let realm = try! Realm()
-        if let items:[Repository] = entity.repositoryArray {
-            let item:Repository? = items.count == 1 ? items.first : nil
+        
+        if entity.repositoryArray.count > 0 {
+            let item:AnyObject = entity.repositoryArray.count == 1 ? entity.repositoryArray.first! : Placeholder()
             realm.beginWrite()
             // add a map record that indicates if we should pull the single included item, or that we should pull all persisted items
             let map = ModelMap(cacheKey: key, objectType: "Repository", item: item)
             realm.add(map, update: true)
-            // persist all challenges, updating anything that has changed
-            for item:Object in items {
-                realm.add(item, update: true)
+            // persist all objects, updating anything that has changed
+            for repo in entity.repositoryArray {
+                realm.add(repo, update: true)
+            }
+            try! realm.commitWrite()
+        } else if entity.userArray.count > 0 {
+            let item:AnyObject = entity.userArray.count == 1 ? entity.userArray.first! : Placeholder()
+            realm.beginWrite()
+            // add a map record that indicates if we should pull the single included item, or that we should pull all persisted items
+            let map = ModelMap(cacheKey: key, objectType: "User", item: item)
+            realm.add(map, update: true)
+            // persist all objects, updating anything that has changed
+            for user in entity.userArray {
+                realm.add(user, update: true)
             }
             try! realm.commitWrite()
         }

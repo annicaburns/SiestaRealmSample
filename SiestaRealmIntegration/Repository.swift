@@ -15,6 +15,7 @@ class Repository: Object {
     dynamic var created_at = ""
     dynamic var updated_at = ""
     dynamic var watchers = 0
+    dynamic var siestaKey = ""
     
     override static func primaryKey() -> String? {
         return "full_name"

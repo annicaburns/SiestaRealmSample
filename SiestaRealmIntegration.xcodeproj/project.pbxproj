@@ -117,12 +117,12 @@
 		75D981011BF28757004C938A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				75E52B411BF3A05600AC7ADB /* Repository.swift */,
 				75B17C1A1BF28D40009895E6 /* GitHubAPI.swift */,
 				751500E41BF2A0EF00680714 /* Siesta+ModelContentAccessors.swift */,
 				751500E01BF2989A00680714 /* Siesta+SwiftyJSON.swift */,
 				75E52B431BF3A33200AC7ADB /* SiestaRealmCache.swift */,
 				75E52B451BF3A39700AC7ADB /* SiestaRealmModelMap.swift */,
+				75E52B411BF3A05600AC7ADB /* Repository.swift */,
 				75E52B471BF4069C00AC7ADB /* User.swift */,
 			);
 			name = Model;

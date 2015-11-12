@@ -25,6 +25,7 @@ class _GitHubAPI: Service {
         configure {
             $0.config.headers["Authorization"] = self.basicAuthHeader
             $0.config.responseTransformers.add(GithubErrorMessageExtractor())
+//            $0.config.persistentCache = SiestaRealmCache()
         }
         
         /// Configure the ResponseTransformers that parse JSON content into our models

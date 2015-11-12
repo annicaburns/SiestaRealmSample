@@ -12,6 +12,7 @@ class User: Object {
     
     dynamic var login = ""
     dynamic var name = ""
+    dynamic var siestaKey = ""
     
     override static func primaryKey() -> String? {
         return "login"

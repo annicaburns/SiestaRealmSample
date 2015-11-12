@@ -10,18 +10,21 @@ import Siesta
 
 class TableViewController: UITableViewController, ResourceObserver {
     
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    
     var statusOverlay = ResourceStatusOverlay()
     
-//    var user: Resource? {
-//        didSet {
-//            oldValue?.removeObservers(ownedBy: self)
-//            oldValue?.cancelLoadIfUnobserved(afterDelay: 0.1)
-//            
-//            user?.addObserver(self)
-//                .addObserver(statusOverlay, owner: self)
-//                .loadIfNeeded()
-//        }
-//    }
+    var userList: Resource? {
+        didSet {
+            oldValue?.removeObservers(ownedBy: self)
+            oldValue?.cancelLoadIfUnobserved(afterDelay: 0.1)
+            
+            userList?.addObserver(self)
+                .addObserver(statusOverlay, owner: self)
+                .loadIfNeeded()
+        }
+    }
     
     var repoList: Resource? {
         didSet {
@@ -41,12 +44,26 @@ class TableViewController: UITableViewController, ResourceObserver {
         
         statusOverlay.embedIn(self)
         
+        self.userList = GitHubAPI.user()
         self.repoList = GitHubAPI.userRepos()
 
     }
     
     override func viewDidLayoutSubviews() {
         statusOverlay.positionToCover(self.view)
+    }
+    
+    // MARK: - Functions
+    
+    func updateHeaderView() {
+        if let user = userList?.userArray.first {
+            self.usernameLabel.text = user.login
+            self.fullNameLabel.text = user.name
+        } else {
+            self.usernameLabel.text = ""
+            self.fullNameLabel.text = ""
+        }
+
     }
 
 
@@ -91,6 +108,7 @@ class TableViewController: UITableViewController, ResourceObserver {
     
     func resourceChanged(resource: Resource, event: ResourceEvent) {
         self.tableView.reloadData()
+        self.updateHeaderView()
     }
 
 }

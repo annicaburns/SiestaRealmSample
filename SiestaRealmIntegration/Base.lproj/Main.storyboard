@@ -15,9 +15,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="vv3-2U-etB">
+                            <rect key="frame" x="0.0" y="64" width="600" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgz-R2-MF0">
+                                    <rect key="frame" x="255" y="14" width="91.5" height="23"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edf-JG-BzA">
+                                    <rect key="frame" x="262" y="42" width="76.5" height="20.5"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Hgz-R2-MF0" firstAttribute="top" secondItem="vv3-2U-etB" secondAttribute="top" constant="14" id="IXd-gz-DWS"/>
+                                <constraint firstItem="edf-JG-BzA" firstAttribute="centerX" secondItem="vv3-2U-etB" secondAttribute="centerX" id="cst-mZ-WkV"/>
+                                <constraint firstItem="Hgz-R2-MF0" firstAttribute="centerX" secondItem="vv3-2U-etB" secondAttribute="centerX" id="pJm-6m-K5Q"/>
+                                <constraint firstItem="edf-JG-BzA" firstAttribute="top" secondItem="Hgz-R2-MF0" secondAttribute="bottom" constant="5" id="txD-nb-Nq2"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="Ko3-Hj-I90" customClass="RepositoryTableViewCell" customModule="SiestaRealmIntegration" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="172" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ko3-Hj-I90" id="KVa-bf-cjC">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -50,6 +76,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="qb4-Vg-n0a"/>
                     <connections>
+                        <outlet property="fullNameLabel" destination="edf-JG-BzA" id="Dfv-tc-HPj"/>
+                        <outlet property="usernameLabel" destination="Hgz-R2-MF0" id="ecJ-XW-EMN"/>
                         <segue destination="Vmi-qN-LDD" kind="show" identifier="ShowDetail" id="rge-Iz-ZFW"/>
                     </connections>
                 </tableViewController>

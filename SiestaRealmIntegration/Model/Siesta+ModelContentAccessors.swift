@@ -10,6 +10,8 @@ import RealmSwift
 
 extension TypedContentAccessors {
     
+    var userArray: [User] {return contentAsType(ifNone: [] as [User]) }
+    
     var repositoryArray: [Repository] { return contentAsType(ifNone: [] as [Repository]) }
     
 }

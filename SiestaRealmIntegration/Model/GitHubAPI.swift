@@ -8,7 +8,6 @@
 import Siesta
 
 let GitHubAPI = _GitHubAPI()
-import SwiftyJSON
 
 // Supply any GitHub username here
 let GitHubUsername = "bustoutsolutions"
@@ -22,28 +21,39 @@ class _GitHubAPI: Service {
             Siesta.enabledLogCategories = LogCategory.common
         #endif
         
+        /// Configure the service
         configure {
             $0.config.headers["Authorization"] = self.basicAuthHeader
             $0.config.responseTransformers.add(GithubErrorMessageExtractor())
         }
         
-        configure("/users/*/repos")    {
-            $0.config.responseTransformers.add(RepoListTransformer())
-            //$0.config.persistentCache = SiestaRealmCache()
+        /// Configure the ResponseTransformers that parse JSON content into our models
+        
+        configureTransformer("/users/*/repos") {
+            Repository.parseItemList($0.content as NSJSONConvertible)
         }
         
-        configure("/repos/*/*")    {
-            $0.config.responseTransformers.add(RepoListTransformer())
-            //$0.config.persistentCache = SiestaRealmCache()
+        configureTransformer("/repos/*/*") {
+            Repository.parseItemList($0.content as NSJSONConvertible)
         }
-        
-        configure("/users/*")    {
-            $0.config.responseTransformers.add(UserListTransformer())
-            //$0.config.persistentCache = SiestaRealmCache()
+
+        configureTransformer("/users/*") {
+            User.parseItemList($0.content as NSJSONConvertible)
         }
         
     }
     
+    /// Resource convenience accessors
+    
+    func user() -> Resource {
+        return resource("users").child(GitHubUsername)
+    }
+    func userRepos() -> Resource {
+        return resource("users").child(GitHubUsername).child("repos")
+    }
+    func repo(fullname: String) -> Resource {
+        return resource("repos").child(fullname)
+    }
     
     private var basicAuthHeader: String? {
         let env = NSProcessInfo.processInfo().environment
@@ -54,20 +64,6 @@ class _GitHubAPI: Service {
         } else {
             return nil
         }
-    }
-    
-    // Resource convenience accessors
-    
-    func user() -> Resource {
-        return resource("users").child(GitHubUsername)
-    }
-    
-    func userRepos() -> Resource {
-        return resource("users").child(GitHubUsername).child("repos")
-    }
-
-    func repo(fullname: String) -> Resource {
-        return resource("repos").child(fullname)
     }
     
 }
@@ -85,22 +81,3 @@ private struct GithubErrorMessageExtractor: ResponseTransformer {
     }
 }
 
-/// Parses JSON content into our models
-
-public func RepoListTransformer(transformErrors: Bool = false) -> ResponseTransformer {
-    return ResponseContentTransformer(transformErrors: transformErrors)
-        {
-            (content: NSJSONConvertible, entity: Entity) throws -> [Repository] in
-            
-            return Repository.parseItemList(content)
-    }
-}
-
-public func UserListTransformer(transformErrors: Bool = false) -> ResponseTransformer {
-    return ResponseContentTransformer(transformErrors: transformErrors)
-        {
-            (content: NSJSONConvertible, entity: Entity) throws -> [User] in
-            
-            return User.parseItemList(content)
-    }
-}

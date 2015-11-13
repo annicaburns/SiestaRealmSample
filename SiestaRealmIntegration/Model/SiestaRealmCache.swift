@@ -36,8 +36,6 @@ class SiestaRealmCache: EntityCache {
         let realm = try! Realm()
         realm.beginWrite()
 
-        // TODO - set up a protocol to enforce the presence of the siestaKey property
-
         if entity.repositoryArray.count > 0 {
             let map = ModelMap(cacheKey: key, objectType: "Repository")
             realm.add(map, update: true)
@@ -59,6 +57,5 @@ class SiestaRealmCache: EntityCache {
         try! realm.commitWrite()
 
     }
-    
     
 }

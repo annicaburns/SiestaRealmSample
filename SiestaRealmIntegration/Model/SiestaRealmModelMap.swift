@@ -24,6 +24,3 @@ class ModelMap: Object {
     
 }
 
-class Placeholder:Object {
-    
-}

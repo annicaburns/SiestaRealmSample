@@ -29,33 +29,10 @@ class _GitHubAPI: Service {
         }
         
         /// Configure the ResponseTransformers that parse JSON content into our models
-        
-        configureTransformer("/users/*/repos") {
-            Repository.parseItemList($0.content as NSJSONConvertible)
-        }
-        
-        configureTransformer("/repos/*/*") {
-            Repository.parseItemList($0.content as NSJSONConvertible)
-        }
-
-        configureTransformer("/users/*") {
-            User.parseItemList($0.content as NSJSONConvertible)
-        }
+        self.configureTransformerPipeline()
         
     }
-    
-    /// Resource convenience accessors
-    
-    func user() -> Resource {
-        return resource("users").child(GitHubUsername)
-    }
-    func userRepos() -> Resource {
-        return resource("users").child(GitHubUsername).child("repos")
-    }
-    func repo(fullname: String) -> Resource {
-        return resource("repos").child(fullname)
-    }
-    
+        
     private var basicAuthHeader: String? {
         let env = NSProcessInfo.processInfo().environment
         if let username = env["GITHUB_USER"],

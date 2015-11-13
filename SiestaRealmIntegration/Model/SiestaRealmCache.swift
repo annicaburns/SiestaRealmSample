@@ -14,18 +14,19 @@ class SiestaRealmCache: EntityCache {
         print("SiestaRealmCache readEntity")
         
         let realm = try! Realm()
-        
+        let predicate : NSPredicate = NSPredicate(format:"siestaKey = %@", key)
+
         if let modelMap = realm.objectForPrimaryKey(ModelMap.self, key: key) {
-            let predicate : NSPredicate = NSPredicate(format:"siestaKey = %@", key)
-            if modelMap.objectType == "Repo" {
-                let itemList = realm.objects(Repo).filter(predicate)
-                return Entity(content: itemList, contentType: "")
-            } else if modelMap.objectType == "User" {
-                let itemList = realm.objects(User).filter(predicate)
-                return Entity(content: itemList, contentType: "")
+            switch modelMap.objectType {
+                case "Repo":
+                    return Entity(content: realm.objects(Repo).filter(predicate), contentType: "")
+                case "User":
+                    return Entity(content: realm.objects(User).filter(predicate), contentType: "")
+                default:
+                    return nil
             }
+
         }
-        
         
         return nil
     }

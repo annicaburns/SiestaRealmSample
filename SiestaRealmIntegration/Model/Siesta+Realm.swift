@@ -14,11 +14,11 @@ extension _GitHubAPI {
     func configureTransformerPipeline() {
 
         configureTransformer("/users/*/repos") {
-            Repository.parseItemList($0.content as NSJSONConvertible)
+            Repo.parseItemList($0.content as NSJSONConvertible)
         }
         
         configureTransformer("/repos/*/*") {
-            Repository.parseItemList($0.content as NSJSONConvertible)
+            Repo.parseItemList($0.content as NSJSONConvertible)
         }
         
         configureTransformer("/users/*") {
@@ -44,6 +44,6 @@ extension TypedContentAccessors {
     
     var userArray: [User] {return contentAsType(ifNone: [] as [User]) }
     
-    var repositoryArray: [Repository] { return contentAsType(ifNone: [] as [Repository]) }
+    var repositoryArray: [Repo] { return contentAsType(ifNone: [] as [Repo]) }
     
 }

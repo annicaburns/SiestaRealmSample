@@ -6,7 +6,6 @@
 //
 
 import RealmSwift
-import Siesta
 
 class User: Object {
     
@@ -22,7 +21,7 @@ class User: Object {
 
 extension User {
     
-    class func parseItemList(fromJSON:NSJSONConvertible) -> [User] {
+    class func parseItemList(fromJSON:AnyObject) -> [User] {
         var list = [User]()
         
         if let jsonArray = fromJSON as? NSArray {

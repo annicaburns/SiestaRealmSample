@@ -17,14 +17,15 @@ class SiestaRealmCache: EntityCache {
         
         if let modelMap = realm.objectForPrimaryKey(ModelMap.self, key: key) {
             let predicate : NSPredicate = NSPredicate(format:"siestaKey = %@", key)
-            if modelMap.objectType == "Repository" {
-                let itemList = realm.objects(Repository).filter(predicate)
+            if modelMap.objectType == "Repo" {
+                let itemList = realm.objects(Repo).filter(predicate)
                 return Entity(content: itemList, contentType: "")
             } else if modelMap.objectType == "User" {
                 let itemList = realm.objects(User).filter(predicate)
                 return Entity(content: itemList, contentType: "")
             }
         }
+        
         
         return nil
     }
@@ -37,7 +38,7 @@ class SiestaRealmCache: EntityCache {
         realm.beginWrite()
 
         if entity.repositoryArray.count > 0 {
-            let map = ModelMap(cacheKey: key, objectType: "Repository")
+            let map = ModelMap(cacheKey: key, objectType: "Repo")
             realm.add(map, update: true)
             // persist all objects, adding the cacheKey
             for repo in entity.repositoryArray {

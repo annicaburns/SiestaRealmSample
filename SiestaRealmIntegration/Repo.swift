@@ -1,14 +1,13 @@
 //
-//  Repository.swift
+//  Repo.swift
 //  SiestaRealmIntegration
 //
 //  Created by Annica Burns on 11/11/15.
 //
 
 import RealmSwift
-import Siesta
 
-class Repository: Object {
+class Repo: Object {
     
     dynamic var name = ""
     dynamic var full_name = ""
@@ -23,22 +22,21 @@ class Repository: Object {
     
 }
 
-extension Repository {
+extension Repo {
     
-    class func parseItemList(fromJSON:NSJSONConvertible) -> [Repository] {
-        var list = [Repository]()
+    class func parseItemList(fromJSON:AnyObject) -> [Repo] {
+        var list = [Repo]()
         
         if let jsonArray = fromJSON as? NSArray {
             for itemDictionary in jsonArray {
-                let item = Repository(value: itemDictionary)
+                let item = Repo(value: itemDictionary)
                 list.append(item)
             }
         } else if let jsonDictionary = fromJSON as? NSDictionary {
-            list.append(Repository(value: jsonDictionary))
+            list.append(Repo(value: jsonDictionary))
         }
         
         return list
     }
-    
     
 }

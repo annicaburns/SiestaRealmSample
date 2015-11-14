@@ -16,7 +16,8 @@ class DetailViewController: UIViewController, ResourceObserver {
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label3: UILabel!
     @IBOutlet weak var label4: UILabel!
-    
+    @IBOutlet weak var label5: UILabel!
+    @IBOutlet weak var label6: UILabel!
     
     var statusOverlay = ResourceStatusOverlay()
     
@@ -72,7 +73,14 @@ class DetailViewController: UIViewController, ResourceObserver {
                     let dateString = shortDateFormatter.stringFromDate(date)
                     self.label3.text = "Updated: " + dateString
                 }
-                self.label4.text = "Watchers: " + String(repository.watchers)
+                self.label4.text = "Watchers: " + String(repository.subscribers_count)
+                self.label5.text = "Stargazers: " + String(repository.stargazers_count)
+                if let repoOwner = repository.owner {
+                    self.label6.text = "Owner: " + repoOwner.login
+                } else {
+                    self.label6.text = ""
+                }
+
             }
 
         }

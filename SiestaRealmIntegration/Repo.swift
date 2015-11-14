@@ -13,7 +13,9 @@ class Repo: Object {
     dynamic var full_name = ""
     dynamic var created_at = ""
     dynamic var updated_at = ""
-    dynamic var watchers = 0
+    dynamic var subscribers_count = 0
+    dynamic var stargazers_count = 0
+    dynamic var owner:Owner? = Owner()
     dynamic var siestaKey = ""
     
     override static func primaryKey() -> String? {

@@ -55,24 +55,19 @@ class DetailViewController: UIViewController, ResourceObserver {
             infoView.hidden = (self.repoList == nil)
             if let repository = repoList?.repositoryArray.first {
                 
-                let rfc3339DateFormatter = NSDateFormatter()
-                let enUSPOSIXLocale = NSLocale(localeIdentifier: "en_US_POSIX")
-                rfc3339DateFormatter.locale = enUSPOSIXLocale
-                rfc3339DateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
-                rfc3339DateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
-                
                 let shortDateFormatter = NSDateFormatter()
                 shortDateFormatter.dateStyle = .ShortStyle
                 
                 self.label1.text = "Name: " + repository.name
-                if let date = rfc3339DateFormatter.dateFromString(repository.created_at) {
+                if let date = repository.createdDate {
                     let dateString = shortDateFormatter.stringFromDate(date)
                     self.label2.text = "Created: " + dateString
                 }
-                if let date = rfc3339DateFormatter.dateFromString(repository.updated_at) {
+                if let date = repository.updatedDate {
                     let dateString = shortDateFormatter.stringFromDate(date)
                     self.label3.text = "Updated: " + dateString
                 }
+                
                 self.label4.text = "Watchers: " + String(repository.subscribers_count)
                 self.label5.text = "Stargazers: " + String(repository.stargazers_count)
                 if let repoOwner = repository.owner {

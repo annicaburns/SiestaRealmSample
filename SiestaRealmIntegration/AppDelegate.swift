@@ -11,10 +11,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let rfc3339DateFormatter = NSDateFormatter()
+    let enUSPOSIXLocale = NSLocale(localeIdentifier: "en_US_POSIX")
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        rfc3339DateFormatter.locale = enUSPOSIXLocale
+        rfc3339DateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
+        rfc3339DateFormatter.timeZone = NSTimeZone(forSecondsFromGMT: 0)
+        
         return true
     }
 

@@ -19,13 +19,21 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="80"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgz-R2-MF0">
-                                    <rect key="frame" x="255" y="14" width="91.5" height="23"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c42-hX-PL5">
+                                    <rect key="frame" x="15" y="15" width="50" height="50"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="3gC-if-WJ2"/>
+                                        <constraint firstAttribute="height" constant="50" id="tCj-YZ-hXa"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgz-R2-MF0">
+                                    <rect key="frame" x="88" y="14" width="258.5" height="23"/>
                                     <animations/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edf-JG-BzA">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edf-JG-BzA">
                                     <rect key="frame" x="262" y="42" width="76.5" height="20.5"/>
                                     <animations/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -36,8 +44,8 @@
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="Hgz-R2-MF0" firstAttribute="top" secondItem="vv3-2U-etB" secondAttribute="top" constant="14" id="IXd-gz-DWS"/>
-                                <constraint firstItem="edf-JG-BzA" firstAttribute="centerX" secondItem="vv3-2U-etB" secondAttribute="centerX" id="cst-mZ-WkV"/>
-                                <constraint firstItem="Hgz-R2-MF0" firstAttribute="centerX" secondItem="vv3-2U-etB" secondAttribute="centerX" id="pJm-6m-K5Q"/>
+                                <constraint firstItem="c42-hX-PL5" firstAttribute="centerY" secondItem="vv3-2U-etB" secondAttribute="centerY" id="brg-fc-wu4"/>
+                                <constraint firstItem="c42-hX-PL5" firstAttribute="leading" secondItem="vv3-2U-etB" secondAttribute="leading" constant="15" id="dT5-JW-9hR"/>
                                 <constraint firstItem="edf-JG-BzA" firstAttribute="top" secondItem="Hgz-R2-MF0" secondAttribute="bottom" constant="5" id="txD-nb-Nq2"/>
                             </constraints>
                         </view>
